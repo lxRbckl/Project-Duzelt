@@ -1,6 +1,12 @@
 # import <
-from os import system
 from time import sleep
+from os import system, path
+
+# >
+
+
+# global <
+gDirectory = '/'.join(path.realpath(__file__).split('/')[:-1])
 
 # >
 
@@ -12,7 +18,7 @@ if (__name__ == '__main__'):
 
         # run patch <
         # wait <
-        system(command = 'bash patch.sh')
+        system(command = f'bash {gDirectory}/patch.sh')
         sleep(150)
 
         # >
